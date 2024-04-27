@@ -1,5 +1,5 @@
 <script>
-	
+	import Email from "./Email.svelte";
 </script>
 
 <style>
@@ -19,7 +19,7 @@
 		</div>
 
 		<div class="">
-			<button>Subscribe to monthly newsletter</button>
+			<Email/>
 		</div>
 	</div>
 	<div class="right-container">
