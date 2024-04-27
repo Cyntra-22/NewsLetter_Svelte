@@ -4,9 +4,11 @@
 
 <style>
 
+
 	:root{
 		--font:'Work Sans', sans-serif;
-		--bgColor: rgb(132, 68, 210);
+		--bgColor: hsl(234, 29%, 20%);
+		--button-color: hsl(235, 18%, 26%);
 
 	}
 
@@ -31,7 +33,6 @@
 	}
 
 	.left-container{
-		padding-right: 20px;
 		padding-left: 10px;
 	}
 
@@ -41,16 +42,21 @@
 	
 	ul{
 		padding: 0;
+		
 	}
 	li{
 		list-style-type: none;
-		padding-top: 7px;
-		padding-bottom: 7px;
+		padding: 4px 4px;
 	}
 
 	.list-item{
 		padding-left: 7px;
 		font-size: 14px;
+	}
+
+	h1{
+		color: var(--bgColor);
+		font-size: 40px;
 	}
 </style>
 
