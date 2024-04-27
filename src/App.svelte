@@ -3,7 +3,22 @@
 </script>
 
 <style>
-	
+	.main-container{
+		display: flex;
+		width: 40%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		background-color: blueviolet;
+		padding: 20px;
+		border-radius: 15px;
+		justify-content: space-between;
+	}
+
+	.right-container img{
+		width: 270px;
+	}
 </style>
 
 <div class="main-container">
@@ -23,7 +38,7 @@
 		</div>
 	</div>
 	<div class="right-container">
-		
+		<img src="/illustration-sign-up-desktop.svg" alt = "side-image"/>
 	</div>
 
 </div>
