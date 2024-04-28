@@ -91,7 +91,6 @@
 		.main-container{
 			flex-direction: column-reverse;
 			width: 80%;
-			margin: 20px;
 		}
 	}
 </style>
