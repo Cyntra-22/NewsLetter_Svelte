@@ -81,16 +81,14 @@
         opacity: 0.7;
     }
 
-    @media (max-width: 750px){
-		
-		button{
-            width: 100%;
+    @media (min-width: 300px) and (max-width: 768px ){
+        button{
+            width: 95%;
         }
         input{
-            width: 100%;
+            width: 95%;
         }
-	}
-
+    }
 
 </style>
 

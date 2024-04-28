@@ -87,11 +87,20 @@
 		font-size: 40px;
 	}
 
-	@media (max-width: 750px){
+	@media (min-width: 300px) and (max-width: 768px ){
 		.main-container{
 			flex-direction: column-reverse;
-			width: 80%;
+			width: 70%;
+			
 		}
+
+		.left-container{
+			width: 100%;
+		}
+		.right-container img{
+			width: 100%;
+		}
+	
 	}
 </style>
 
