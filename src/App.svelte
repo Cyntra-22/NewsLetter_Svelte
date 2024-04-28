@@ -93,6 +93,12 @@
 			width: 80%;
 			margin: 20px;
 		}
+		.right-container img{
+		width: 100%;
+		
+	}
+	
+
 	}
 </style>
 
@@ -112,7 +118,7 @@
 				</ul>
 			</div>
 
-			<div class="">
+			<div>
 				{#if !showMessage}
 					<Email on:submit ={handleEmailSubmission}/>
 				{:else}

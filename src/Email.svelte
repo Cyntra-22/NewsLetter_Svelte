@@ -84,10 +84,10 @@
     @media (max-width: 750px){
 		
 		button{
-            width: 80%;
+            width: 100%;
         }
         input{
-            width: 80%;
+            width: 100%;
         }
 	}
 
