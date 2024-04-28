@@ -1,9 +1,25 @@
 <script>
 	import Email from "./Email.svelte";
+	import Notification from "./Notification.svelte";
+
+	let submittedEmail = '';
+	let showMessage = false;
+
+
+	function handleEmailSubmission(event){
+		submittedEmail = event.detail.email;
+		showMessage = true;
+	}
+
+	function dismissMessage(){
+		showMessage = false;
+	}
+
+
+
 </script>
 
 <style>
-
 
 	:root{
 		--font:'Work Sans', sans-serif;
@@ -28,7 +44,7 @@
 		transform: translate(-50%,-50%);
 		background-color: white;
 		padding: 20px;
-		border-radius: 15px;
+		border-radius: 20px;
 		justify-content: space-between;
 	}
 
@@ -60,24 +76,34 @@
 	}
 </style>
 
-<div class="main-container">
-	<div class="left-container">
-		<div class="">
-			<h1>Stay updated!</h1>
-			<p>Join 60,000+ product managers receiving monthly updates on: </p>
-			<ul>
-				<li><img src="/icon-list.svg" alt="" width="15px"/><span class="list-item">Product discovery and building what matters</span></li>
-				<li><img src="/icon-list.svg" alt="" width="15px"/><span class="list-item">Measuring to ensure updates are a success </span></li>
-				<li><img src="/icon-list.svg" alt="" width="15px"/><span class="list-item">And much more!</span></li>
-			</ul>
+
+{#if showMessage}
+  <Notification email={submittedEmail} on:dismiss={dismissMessage} />
+{:else}
+	<div class="main-container">
+		<div class="left-container">
+			<div class="">
+				<h1>Stay updated!</h1>
+				<p>Join 60,000+ product managers receiving monthly updates on: </p>
+				<ul>
+					<li><img src="/icon-list.svg" alt="" width="15px"/><span class="list-item">Product discovery and building what matters</span></li>
+					<li><img src="/icon-list.svg" alt="" width="15px"/><span class="list-item">Measuring to ensure updates are a success </span></li>
+					<li><img src="/icon-list.svg" alt="" width="15px"/><span class="list-item">And much more!</span></li>
+				</ul>
+			</div>
+
+			<div class="">
+				{#if !showMessage}
+					<Email on:submit ={handleEmailSubmission}/>
+				{:else}
+					<Notification email={submittedEmail} on:dismiss={dismissMessage}/>
+				{/if}
+			</div>
+		</div>
+		<div class="right-container">
+			<img src="/illustration-sign-up-desktop.svg" alt = "side-image"/>
 		</div>
 
-		<div class="">
-			<Email/>
-		</div>
-	</div>
-	<div class="right-container">
-		<img src="/illustration-sign-up-desktop.svg" alt = "side-image"/>
 	</div>
 
-</div>
+{/if}
