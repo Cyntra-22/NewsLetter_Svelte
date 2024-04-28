@@ -45,6 +45,20 @@
         width: 35px;
         height: 35px;
     }
+
+    @media (max-width: 650px){
+        .success-container{
+            width: 240px;
+        }
+        button{
+            margin-top: 150px;
+            width: 240px;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
 </style>
 
 <div class="success-container">
