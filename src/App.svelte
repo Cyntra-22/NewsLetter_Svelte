@@ -87,7 +87,7 @@
 		font-size: 40px;
 	}
 
-	@media (max-width: 768px){
+	@media (max-width: 750px){
 		.main-container{
 			flex-direction: column-reverse;
 		}
