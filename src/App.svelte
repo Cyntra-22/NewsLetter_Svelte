@@ -90,6 +90,7 @@
 	@media (max-width: 750px){
 		.main-container{
 			flex-direction: column-reverse;
+			width: 100%;
 		}
 	}
 </style>
