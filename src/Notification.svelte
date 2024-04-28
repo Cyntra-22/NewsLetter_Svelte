@@ -46,7 +46,7 @@
         height: 35px;
     }
 
-    @media (max-width: 650px){
+    @media (max-width: 750px){
         .success-container{
             width: 240px;
         }
