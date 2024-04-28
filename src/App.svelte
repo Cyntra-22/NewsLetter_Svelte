@@ -1,9 +1,18 @@
 <script>
+  import { onMount } from "svelte";
 	import Email from "./Email.svelte";
 	import Notification from "./Notification.svelte";
 
 	let submittedEmail = '';
 	let showMessage = false;
+
+	let right_image = "/illustration-sign-up-desktop.svg";
+
+	onMount(() =>{
+		if(window.innerWidth < 1080) {
+			right_image = "/illustration-sign-up-mobile.svg";
+		}
+	});
 
 
 	function handleEmailSubmission(event){
@@ -46,14 +55,17 @@
 		padding: 20px;
 		border-radius: 20px;
 		justify-content: space-between;
+		
 	}
 
 	.left-container{
 		padding-left: 10px;
+	
 	}
 
 	.right-container img{
 		width: 270px;
+		
 	}
 	
 	ul{
@@ -73,6 +85,12 @@
 	h1{
 		color: var(--bgColor);
 		font-size: 40px;
+	}
+
+	@media (max-width: 768px){
+		.main-container{
+			flex-direction: column-reverse;
+		}
 	}
 </style>
 
@@ -100,8 +118,8 @@
 				{/if}
 			</div>
 		</div>
-		<div class="right-container">
-			<img src="/illustration-sign-up-desktop.svg" alt = "side-image"/>
+		<div class="right-container" >
+			<img src={right_image} alt = "side-image"/>
 		</div>
 
 	</div>

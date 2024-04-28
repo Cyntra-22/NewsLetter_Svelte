@@ -81,6 +81,16 @@
         opacity: 0.7;
     }
 
+    @media (max-width: 768px){
+		
+		button{
+            width: 240px;
+        }
+        input{
+            width: 240px;
+        }
+	}
+
 
 </style>
 
