@@ -24,8 +24,6 @@
 		showMessage = false;
 	}
 
-
-
 </script>
 
 <style>

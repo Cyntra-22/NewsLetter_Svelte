@@ -25,6 +25,12 @@
         else{
             errorMessage = '';
         }
+        if (errorMessage) {
+            setTimeout(() => {
+                errorMessage = '';
+                email = '';
+            }, 1500);
+        }
     }
 
     function isValidEmail(email) {
@@ -35,7 +41,7 @@
 
     function updateInputStyle() {
         if (errorMessage) {
-            return 'border-color: red; color: red;';
+            return 'border-color: red; color: red; background-color:pink;';
         } else {
             return '';
         }
