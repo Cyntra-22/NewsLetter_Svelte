@@ -10,7 +10,6 @@
         validateEmail();
         if (!errorMessage){
             dispatch('submit', { email });
-            console.log("Email submitted", email);
         }
   }
 
@@ -121,7 +120,7 @@
     {#if errorMessage}
         <input type="email" bind:value={email} placeholder="email@company.com" size="33" style="{updateInputStyle()}"/>
     {:else}
-    <input type="email" bind:value={email} placeholder="email@company.com" size="33"/>
+        <input type="email" bind:value={email} placeholder="email@company.com" size="33"/>
     {/if}
 
     </div>

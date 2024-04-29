@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from "svelte";
+  	import { onMount } from "svelte";
 	import Email from "./Email.svelte";
 	import Notification from "./Notification.svelte";
 
@@ -13,7 +13,6 @@
 			right_image = "/illustration-sign-up-mobile.svg";
 		}
 	});
-
 
 	function handleEmailSubmission(event){
 		submittedEmail = event.detail.email;
@@ -117,12 +116,9 @@
 					<li><img src="/icon-list.svg" alt="" width="15px"/><span class="list-item">And much more!</span></li>
 				</ul>
 			</div>
-
 			<div>
 				{#if !showMessage}
 					<Email on:submit ={handleEmailSubmission}/>
-				{:else}
-					<Notification email={submittedEmail} on:dismiss={dismissMessage}/>
 				{/if}
 			</div>
 		</div>
