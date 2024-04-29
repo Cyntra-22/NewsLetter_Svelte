@@ -20,6 +20,7 @@
         }
         else if(!isValidEmail(email)){
             errorMessage = 'Valid email required';
+            
         }
         else{
             errorMessage = '';
@@ -31,6 +32,14 @@
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
   }
+
+    function updateInputStyle() {
+        if (errorMessage) {
+            return 'border-color: red; color: red;';
+        } else {
+            return '';
+        }
+    }
 </script>
 
 <style>
@@ -88,6 +97,10 @@
         input{
             width: 95%;
         }
+        .error_style{
+            padding-right: 20px;
+    }
+
     }
 
 </style>
@@ -99,7 +112,12 @@
                 <span class="error_style">{errorMessage}</span>
             {/if}
         </label>
-            <input type="email" bind:value ={email} placeholder="email@company.com" size="33"/>
+    {#if errorMessage}
+        <input type="email" bind:value={email} placeholder="email@company.com" size="33" style="{updateInputStyle()}"/>
+    {:else}
+    <input type="email" bind:value={email} placeholder="email@company.com" size="33"/>
+    {/if}
+
     </div>
   <button on:click = {sendEmail}>Subscribe to monthly newsletter</button>
 </div>
